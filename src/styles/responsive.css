@@ -1,0 +1,109 @@
+@media screen and (max-width: 400px) {
+    .post-item-city {
+        display: inline-block;
+    }
+}
+
+@media screen and (max-width: 599px) {
+    post-list {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    post-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 721px) {
+    .header-menu {
+        display: none;
+    }
+
+    .detail-thumbnail {
+        max-height: 522px;
+    }
+
+    .menu-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .nav {
+        z-index: 10;
+        background-color: rgb(255, 161, 46);
+        width: 200px;
+        position: absolute;
+        -webkit-transform: translate(-300px, 0);
+        transform: translate(-300px, 0);
+        transition: transform 0.3s ease;
+        border-radius: 5px;
+    }
+
+    .open {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+    }
+
+    .nav-item {
+        display: list-item;
+        width: 100%;
+        text-align: left;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .nav-item {
+        position: sticky;
+        display: inline-block;
+        list-style: none;
+        margin: 0 20px;
+    }
+
+    post-list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    main {
+        min-width: 1000px;
+    }
+
+    detail-post {
+        width: 75%;
+        grid-template-columns: repeat(3, 1fr);
+        margin: 0 auto;
+        margin-top: 20px;
+        grid-column-gap: 20px;
+    }
+
+    detail-post article {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    detail-post aside {
+        grid-column-start: 3;
+    }
+
+    detail-post section {
+        width: 100%;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 2;
+    }
+
+    .detail-content {
+        width: 100%;
+    }
+
+    .menu-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

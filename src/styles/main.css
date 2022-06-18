@@ -1,0 +1,261 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: 'Changa';
+    background-color: rgba(255, 228, 196, 0.301);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.skip-link {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    background-color: rgba(255, 228, 196, 0.301);
+    color: black;
+    padding: 8px;
+    z-index: 100;
+}
+
+.skip-link:focus {
+    top: 0;
+    text-decoration: none;
+}
+
+/* Loader */
+.page-loader {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(50%, 50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    border: 5px solid white;
+    border-top-color: #ff986c;
+    z-index: 99;
+    animation: spin 1s linear infinite;
+}
+
+/* Header */
+
+.header {
+    display: flex;
+    background-color: rgb(255, 161, 46);
+}
+
+.header-menu {
+    font-size: 20px;
+    margin: 20px 0;
+    display: block;
+    font-weight: bold;
+    text-decoration: none;
+    color: inherit;
+    min-width: 44px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.header-inner {
+    width: 100%;
+    text-align: left;
+}
+
+.header-title {
+    font-size: 25px;
+    font-weight: bold;
+    padding: 14px 20px;
+
+}
+
+.nav {
+    width: 100%;
+    padding: 20px;
+    position: sticky;
+    text-align: right;
+}
+
+.nav-item {
+    position: relative;
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: inherit;
+    padding: 10px;
+}
+
+.nav-item a::after {
+    content: '';
+    height: 2px;
+    width: 0;
+    background: black;
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    transition: 0.5s;
+}
+
+.nav-item a:hover::after {
+    width: 100%;
+}
+
+.hero img {
+    width: 100%;
+}
+
+/* Main */
+
+main {
+    width: 100%;
+    padding: 32px;
+}
+
+.content {
+    margin: 0 auto;
+    min-height: 100%;
+}
+
+.explore {
+    width: 100%;
+    margin: 30px auto;
+    text-align: center;
+}
+
+.explore-label {
+    font-size: 27px;
+    font-weight: lighter;
+}
+
+.explore-label::after {
+    content: '';
+    margin-top: 12px;
+    display: block;
+    border-bottom: 1px dashed black;
+}
+
+post-list {
+    margin: 32px auto auto;
+    text-align: left;
+    overflow: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 15px;
+}
+
+.post-item {
+    margin: 20px 0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.459);
+    width: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.post-item-content {
+    padding: 16px 32px 32px 32px;
+}
+
+.post-item-thumbnail {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.post-item-city {
+    text-decoration: none;
+    color: inherit;
+    border: 0 solid black;
+    padding: 10px 10px;
+    margin-left: 5px;
+    border-radius: 5px;
+    color: whitesmoke;
+    background-color: rgb(255, 161, 46);
+}
+
+.post-item-title {
+    font-weight: 700;
+    font-size: 22px;
+    margin-top: 16px;
+    transition: 0.3s opacity;
+    padding : 10px;
+}
+
+.post-item-title:hover {
+    opacity: 0.5;
+}
+
+.post-item-title a {
+    text-decoration: none;
+    color: inherit;
+    padding: 10px;
+}
+
+.post-item-description {
+    margin-top: 16px;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: justify;
+}
+
+/* Like */
+.like {
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-80px);
+    border: 0;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    margin-bottom: -50px;
+    background-color: white;
+    color: red;
+}
+
+/* Empty Favorite */
+empty-favorite {
+    display: grid;
+    width: 100%;
+    justify-items: center;
+    align-items: center;
+}
+
+.icon-empty-favorite i {
+    font-size: 200px;
+    color: red;
+}
+
+.tag-empty-favorite p .fa-folder-open {
+    font-size: 24px;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0);
+    } to {
+        transform: rotate(360);
+    }    
+}
+
+footer {
+    width: 100%;
+    padding: 20px;
+    background-color: rgb(255, 161, 46);
+    text-align: center;
+    font-weight: bold;
+}
